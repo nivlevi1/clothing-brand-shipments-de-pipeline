@@ -47,6 +47,18 @@ Credentials (hardcoded in `docker-compose.yml`) — used by Adminer (`http://loc
 
 ---
 
+## Services & Ports
+
+| Service | Port | URL | Purpose |
+|---------|------|-----|---------|
+| postgres | 5432 | — | Data warehouse |
+| adminer | 8080 | http://localhost:8080 | DB admin UI |
+| jupyter | 8888 | http://localhost:8888 | Data profiling notebook |
+| api | 7654 | http://localhost:7654/docs | FastAPI REST + Swagger |
+| app | 8501 | http://localhost:8501 | Streamlit analytics |
+
+---
+
 ## Running
 
 > **Main pipeline**
@@ -124,18 +136,6 @@ docker compose up --build -d
 ```powershell
 docker compose run --rm dbt
 ```
-
----
-
-## Services & Ports
-
-| Service | Port | URL | Purpose |
-|---------|------|-----|---------|
-| postgres | 5432 | — | Data warehouse |
-| adminer | 8080 | http://localhost:8080 | DB admin UI |
-| jupyter | 8888 | http://localhost:8888 | Data profiling notebook |
-| api | 7654 | http://localhost:7654/docs | FastAPI REST + Swagger |
-| dashboard | 8501 | http://localhost:8501 | Streamlit analytics |
 
 ---
 
@@ -278,7 +278,7 @@ Swagger UI at `/docs` — interactive, no auth required.
 
 ---
 
-## Dashboard — 5 Tabs
+## Application — 5 Tabs
 
 | Tab | Content |
 |-----|---------|
